@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oJX-uo-oZ6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ImageFlipper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PJW-hl-UMY">
+                                <rect key="frame" x="8" y="375.5" width="398" height="145"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="g0T-NA-bAL">
+                                        <rect key="frame" x="149" y="0.0" width="100" height="100"/>
+                                    </imageView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="uXN-BG-JTz">
+                                        <rect key="frame" x="180.5" y="108" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mJ7-cm-0r9">
+                                <rect key="frame" x="8" y="824.5" width="398" height="29.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-Y5-3tZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="29.5"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="rotate.left" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rotateLeftTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="hxY-fm-ZbH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLp-lt-XE0">
+                                        <rect key="frame" x="101.5" y="0.0" width="93.5" height="29.5"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="">
+                                            <imageReference key="image" image="rotate.right" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rotateRightTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="P26-Nl-44m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ce-mW-TLp">
+                                        <rect key="frame" x="203" y="0.0" width="93.5" height="29.5"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="">
+                                            <imageReference key="image" image="trapezoid.and.line.vertical" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mirrorVerticallyTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="lHR-ZJ-8I6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwK-GO-2k7">
+                                        <rect key="frame" x="304.5" y="0.0" width="93.5" height="29.5"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="">
+                                            <imageReference key="image" image="trapezoid.and.line.horizontal" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mirrorHorizontallyTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZ8-Vz-tr6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PJW-hl-UMY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="8lc-8c-HJf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PJW-hl-UMY" secondAttribute="trailing" constant="8" id="IWo-u5-kXe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mJ7-cm-0r9" secondAttribute="bottom" constant="8" id="RO6-P6-5JB"/>
+                            <constraint firstItem="PJW-hl-UMY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Uy1-7H-mr0"/>
+                            <constraint firstItem="mJ7-cm-0r9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="gor-Lw-ift"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mJ7-cm-0r9" secondAttribute="trailing" constant="8" id="ofv-Nj-Q9v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KFC-r2-aQA">
+                        <rightBarButtonItems>
+                            <barButtonItem tag="1" systemItem="camera" id="Ooc-0n-95T">
+                                <connections>
+                                    <action selector="getImageTapped:" destination="BYZ-38-t0r" id="ivD-3i-uo8"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="photo" catalog="system" id="14H-wf-5LX">
+                                <connections>
+                                    <action selector="getImageTapped:" destination="BYZ-38-t0r" id="Bx2-ho-v4K"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="globe" catalog="system" id="8dU-fn-iQ5">
+                                <connections>
+                                    <action selector="imageFromWebTapped:" destination="BYZ-38-t0r" id="U5e-VS-oBe"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" title="Item" image="square.and.arrow.up" catalog="system" id="wbM-LY-lgc">
+                                <connections>
+                                    <action selector="shareTapped:" destination="BYZ-38-t0r" id="cCn-QX-vi8"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="uXN-BG-JTz" id="ybK-Nm-xNO"/>
+                        <outlet property="imageView" destination="g0T-NA-bAL" id="kRh-Ro-MqP"/>
+                        <outlet property="shareButton" destination="wbM-LY-lgc" id="ZIc-mq-EjP"/>
+                        <outletCollection property="editButtons" destination="b3a-Y5-3tZ" collectionClass="NSMutableArray" id="tnn-S8-prC"/>
+                        <outletCollection property="editButtons" destination="GLp-lt-XE0" collectionClass="NSMutableArray" id="KfM-7w-WOK"/>
+                        <outletCollection property="editButtons" destination="8Ce-mW-TLp" collectionClass="NSMutableArray" id="i5u-qH-DUo"/>
+                        <outletCollection property="editButtons" destination="TwK-GO-2k7" collectionClass="NSMutableArray" id="jYU-2M-WWe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5hp-Dq-gKY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oJX-uo-oZ6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="16I-oT-xpZ">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Iz4-75-z5y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHc-LD-JV1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="globe" catalog="system" width="128" height="123"/>
+        <image name="noImage" width="100" height="100"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="rotate.left" catalog="system" width="115" height="128"/>
+        <image name="rotate.right" catalog="system" width="115" height="128"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="trapezoid.and.line.horizontal" catalog="system" width="128" height="91"/>
+        <image name="trapezoid.and.line.vertical" catalog="system" width="126" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
