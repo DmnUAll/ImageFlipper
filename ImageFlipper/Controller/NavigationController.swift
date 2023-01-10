@@ -7,6 +7,10 @@ final class NavigationController: UINavigationController {
     private var presenter: NavigationPresenter?
     private let imagePicker = UIImagePickerController()
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
         configureNavigationController()
