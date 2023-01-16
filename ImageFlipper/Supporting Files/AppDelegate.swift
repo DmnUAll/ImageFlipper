@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  ImageFlipper
-//
-//  Created by Илья Валито on 13.09.2022.
-//
-
 import UIKit
 
 @main
