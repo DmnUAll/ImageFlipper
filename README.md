@@ -10,7 +10,6 @@ App allows user to take a photo, choose an image from the library or from the In
 <img src="https://user-images.githubusercontent.com/82824022/211532849-ee6ae0f8-6d1e-4728-b791-3f54d22c94fd.PNG" width=30% height=30%> 
 </p>
 
-This project was the ninth app writen by myself.\
 The main functionality that was applied in this project:
 - UIActivityViewController
 - UIImagePickerController
